@@ -1,0 +1,9 @@
+{
+  "title":"ToursJUG - Information",
+  "theme":"toursjug",
+  "controls":false,
+  "progress":true,
+  "history":true,
+  "center":true,
+  "transition":"fade"
+}

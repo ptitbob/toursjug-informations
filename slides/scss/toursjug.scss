@@ -1,0 +1,79 @@
+/**
+ * White theme for reveal.js. This is the opposite of the 'black' theme.
+ *
+ * By Hakim El Hattab, http://hakim.se
+ */
+
+
+// Default mixins and settings -----------------
+@import "../../reveal/revealjs/css/theme/template/mixins";
+@import "../../reveal/revealjs/css/theme/template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(../../lib/font/source-sans-pro/source-sans-pro.css);
+@import url('https://fonts.googleapis.com/css?family=Caveat');
+@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: #222;
+$headingColor: #222;
+
+$mainFontSize: 42px;
+// $mainFont: 'Source Sans Pro', Helvetica, sans-serif;
+$mainFont: 'Caveat', cursive;
+// $headingFont: 'Source Sans Pro', Helvetica, sans-serif;
+$headingFont: 'Ubuntu', sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #2a76dd;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+@mixin bodyBackground() {
+	$bckImage: url("images/toursJuggy.gif") no-repeat bottom 5px left 10px;
+	background: $bckImage;
+ }
+
+
+// Theme template ------------------------------
+@import "../../reveal/revealjs/css/theme/template/theme";
+// ---------------------------------------------
+
+.reveal {
+	.progress {
+		color: crimson;
+	}
+	section {
+		img {
+			border: none;
+			background: none;
+			box-shadow: none;
+		}
+	}
+}
+
+.reveal {
+	.agenda {
+		border: none;
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+		grid-row-gap: 1em;
+	}
+}
